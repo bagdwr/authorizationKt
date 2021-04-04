@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back"
+        android:foreground="#4D235373"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#ffffff"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Авторизация"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/close"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewFirst"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="#ffffff"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="130dp"
+        />
+
+    <TextView
+        android:id="@+id/authInView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.2"
+        android:text="Авторизация"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toTopOf="@+id/viewFirst"
+        android:gravity="center"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/loginEdit"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="start"
+        android:hint="Логин"
+        android:inputType="text"
+        android:textColor="@color/blueColor"
+        app:layout_constraintTop_toBottomOf="@+id/authInView"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="30dp"
+        />
+
+    <EditText
+        android:id="@+id/passEdit"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="start"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:textColor="@color/blueColor"
+        app:layout_constraintTop_toBottomOf="@+id/loginEdit"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="30dp" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/rounded_btn"
+        android:letterSpacing="0.5"
+        android:text="Войти"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/passEdit"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="30dp" />
+
+    <TextView
+        android:id="@+id/OR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Или"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:letterSpacing="0.3"/>
+
+    <View
+        android:id="@+id/LOGO"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ffffff"
+        app:layout_constraintTop_toBottomOf="@+id/OR"
+        android:layout_marginTop="30dp"
+        />
+
+    <ImageView
+        android:id="@+id/face"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="22dp"
+        android:src="@drawable/facebook"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/LOGO"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/gogl"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/google"
+        app:layout_constraintTop_toTopOf="@+id/LOGO"
+        app:layout_constraintStart_toStartOf="@id/face"
+        android:layout_marginLeft="100dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="50dp" />
+
+    <ImageView
+        android:id="@+id/Tv"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/twitter"
+        app:layout_constraintTop_toTopOf="@+id/LOGO"
+        app:layout_constraintStart_toStartOf="@id/gogl"
+        android:layout_marginLeft="100dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="121dp" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="350dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/LOGO"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/noAcc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="20dp"
+        android:text="Нет аккаунта?"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line" />
+
+    <TextView
+        android:id="@+id/underLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Создать"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        app:layout_constraintStart_toEndOf="@+id/noAcc"
+        android:layout_marginLeft="10dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
