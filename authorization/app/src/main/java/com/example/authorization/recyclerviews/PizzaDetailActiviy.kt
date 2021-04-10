@@ -21,8 +21,8 @@ class PizzaDetailActiviy : AppCompatActivity() {
       }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pizza_detail)
 
         val ivPizzaDetail=findViewById<ImageView>(R.id.ivDetail)
@@ -33,8 +33,8 @@ class PizzaDetailActiviy : AppCompatActivity() {
             val pizza:Pizza=intent.getSerializableExtra("EXTRA_PIZZA") as Pizza
             if (pizza!=null){
                 Glide.with(this).load(pizza.imageURL).into(ivPizzaDetail)
-                tvPizzaDetName.setText(pizza.name)
-                tvPizzaDetPrice.setText(pizza.price)
+                tvPizzaDetName.text=pizza.name.toString()
+                tvPizzaDetPrice.text=pizza.price.toString()
             }
         }
     }

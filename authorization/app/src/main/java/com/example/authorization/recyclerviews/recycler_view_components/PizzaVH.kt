@@ -17,8 +17,8 @@ class PizzaVH(
          val tvPizzaPrice:TextView=view.findViewById(R.id.pizzaPrice)
          var ivPizza:ImageView=view.findViewById(R.id.ivPizza)
 
-         tvPizzaName.setText(pizza.name)
-         tvPizzaPrice.setText(pizza.price)
+         tvPizzaName.text=pizza.name.toString()
+         tvPizzaPrice.text= pizza.price.toString()
 
          Glide.with(view).load(pizza.imageURL).into(ivPizza)
 
