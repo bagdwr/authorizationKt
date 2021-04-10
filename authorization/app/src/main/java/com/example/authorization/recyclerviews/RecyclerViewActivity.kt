@@ -25,7 +25,12 @@ class RecyclerViewActivity: AppCompatActivity() {
 
         val recyclerViewPizza=findViewById<RecyclerView>(R.id.rv)
         recyclerViewPizza.layoutManager=LinearLayoutManager(this)
-        recyclerViewPizza.adapter=PizzaRVAdapter(pizzas)
+        recyclerViewPizza.adapter=PizzaRVAdapter(pizzas
+        ) {
+            val intent=PizzaDetailActiviy.createIntent(this,it)
+            startActivity(intent)
+
+        }
         recyclerViewPizza.addItemDecoration(DividerItemDecoration(this,DividerItemDecoration.VERTICAL))
 
     }

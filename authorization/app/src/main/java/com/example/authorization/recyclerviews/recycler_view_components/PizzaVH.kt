@@ -9,7 +9,8 @@ import com.example.authorization.R
 import com.example.authorization.recyclerviews.models.Pizza
 
 class PizzaVH(
-    val view:View
+    val view:View,
+    val clickListener:(Pizza)->Unit
 ) :RecyclerView.ViewHolder(view){
      fun bind(pizza: Pizza){
          val tvPizzaName:TextView=view.findViewById(R.id.pizzaName)
@@ -22,7 +23,7 @@ class PizzaVH(
          Glide.with(view).load(pizza.imageURL).into(ivPizza)
 
          view.setOnClickListener{
-
+              clickListener.invoke(pizza)
          }
      }
 }

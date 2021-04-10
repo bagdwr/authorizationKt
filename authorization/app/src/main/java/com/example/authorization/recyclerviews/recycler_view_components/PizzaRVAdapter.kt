@@ -8,13 +8,14 @@ import com.example.authorization.R
 import com.example.authorization.recyclerviews.models.Pizza
 
 class PizzaRVAdapter(
-   val items:List<Pizza>
+   val items:List<Pizza>,
+   val clickListener:(Pizza)->Unit
 ) :RecyclerView.Adapter<PizzaVH>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PizzaVH {
         val view=LayoutInflater.from(parent.context)
             .inflate(R.layout.view_holder_pizza,parent,false)
-        return PizzaVH(view)
+        return PizzaVH(view, clickListener)
     }
 
     override fun getItemCount(): Int=items.size
