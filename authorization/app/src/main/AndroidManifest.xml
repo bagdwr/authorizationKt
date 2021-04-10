@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".recyclerviews.RecyclerViewActivity"/>
+        <activity android:name=".recyclerviews.PizzaDetailActiviy"/>
     </application>
 
 </manifest>
