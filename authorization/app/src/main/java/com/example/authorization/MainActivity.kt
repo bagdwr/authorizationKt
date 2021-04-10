@@ -25,7 +25,10 @@ class MainActivity : AppCompatActivity() {
             val passField=findViewById<EditText>(R.id.passEdit).text.toString().trim()
             if (loginField.equals("admin") && passField.equals("qweqwe")){
                 val intent=Intent(this,LoggedIn::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
                 startActivity(intent)
+            }else{
+                Toast.makeText(this,"Incorrect password",Toast.LENGTH_LONG).show()
             }
         }
 
