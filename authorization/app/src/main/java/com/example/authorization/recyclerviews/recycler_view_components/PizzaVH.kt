@@ -4,6 +4,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.authorization.R
 import com.example.authorization.recyclerviews.models.Pizza
 
@@ -18,5 +19,10 @@ class PizzaVH(
          tvPizzaName.setText(pizza.name)
          tvPizzaPrice.setText(pizza.price)
 
+         Glide.with(view).load(pizza.imageURL).into(ivPizza)
+
+         view.setOnClickListener{
+
+         }
      }
 }
