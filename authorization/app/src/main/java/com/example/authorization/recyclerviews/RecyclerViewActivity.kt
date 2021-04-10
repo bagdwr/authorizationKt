@@ -1,9 +1,10 @@
-package com.example.authorization
+package com.example.authorization.recyclerviews
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.authorization.R
 
 class RecyclerViewActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

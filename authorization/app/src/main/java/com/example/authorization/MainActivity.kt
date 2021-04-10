@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.example.authorization.recyclerviews.RecyclerViewActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +19,8 @@ class MainActivity : AppCompatActivity() {
             val loginField=findViewById<EditText>(R.id.loginEdit).text.toString().trim()
             val passField=findViewById<EditText>(R.id.passEdit).text.toString().trim()
             if (loginField.equals("admin") && passField.equals("qweqwe")){
-                val intent=Intent(this,RecyclerViewActivity::class.java)
+                val intent=Intent(this,
+                    RecyclerViewActivity::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
                 startActivity(intent)
             }else{
