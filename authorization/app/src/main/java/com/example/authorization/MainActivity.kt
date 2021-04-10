@@ -1,14 +1,8 @@
 package com.example.authorization
 
-import android.annotation.SuppressLint
 import android.content.Intent
-import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.SpannableString
-import android.text.Spanned
-import android.text.style.StyleSpan
-import android.text.style.UnderlineSpan
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -24,7 +18,7 @@ class MainActivity : AppCompatActivity() {
             val loginField=findViewById<EditText>(R.id.loginEdit).text.toString().trim()
             val passField=findViewById<EditText>(R.id.passEdit).text.toString().trim()
             if (loginField.equals("admin") && passField.equals("qweqwe")){
-                val intent=Intent(this,LoggedIn::class.java)
+                val intent=Intent(this,RecyclerViewActivity::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
                 startActivity(intent)
             }else{
