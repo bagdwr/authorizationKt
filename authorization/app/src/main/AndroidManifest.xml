@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".recyclerviews.RecyclerViewActivity"/>
         <activity android:name=".recyclerviews.PizzaDetailActiviy"/>
+        <activity android:name=".recyclerviews.in_fragments.SingleRecyclerActivity"/>
     </application>
 
 </manifest>

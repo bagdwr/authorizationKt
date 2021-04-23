@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.example.authorization.recyclerviews.RecyclerViewActivity
+import com.example.authorization.recyclerviews.in_fragments.SingleRecyclerActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
             val passField=findViewById<EditText>(R.id.passEdit).text.toString().trim()
             if (loginField.equals("admin") && passField.equals("qweqwe")){
                 val intent=Intent(this,
-                    RecyclerViewActivity::class.java)
+                    SingleRecyclerActivity::class.java)
                 startActivity(intent)
             }else{
                 Toast.makeText(this,"Incorrect password",Toast.LENGTH_LONG).show()
